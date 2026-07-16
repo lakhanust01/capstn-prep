@@ -7,7 +7,7 @@ export class CartPage {
   async openCart() {
     this.logger.info('Opening cart page');
     await this.page.getByRole('button', { name: 'Cart' }).first().click();
-    await expect(this.page.getByRole('heading', { name: 'Yor cart' })).toBeVisible();
+    await expect(this.page.getByRole('heading', { name: 'Your cart' })).toBeVisible();
     this.logger.info('Cart page is visible');
   }
 

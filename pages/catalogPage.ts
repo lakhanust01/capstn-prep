@@ -6,10 +6,10 @@ export class CatalogPage {
 
   async searchForProduct(searchTerm: string) {
     this.logger.info('Searching for product', { searchTerm });
-    const searchBox = this.page.locator('input[type="search"], input[placeholder="Search products"], [role="searchbox"]');
+    const searchBox = this.page.locator('input[type="search"], input[placeholder="Search products"], input[name="q"], [role="searchbox"]').first();
     await expect(searchBox).toBeVisible();
     await searchBox.fill(searchTerm);
-    await this.page.getByRole('button', { name: 'Search' }).click();
+    await this.page.getByRole('button', { name: /^Search$/i }).first().click();
     this.logger.info('Search submitted');
   }
 
