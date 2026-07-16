@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Playwright artifacts
+playwright-report/
+test-results/
+blob-report/
+allure-results/
+allure-report/
+coverage/
+dist/
+build/
+scripts/
+agents/
+prompts/
+
+# Media and traces
+screenshots/
+videos/
+traces/
+
+# Logs and local env
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
