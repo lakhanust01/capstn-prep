@@ -116,7 +116,7 @@ jobs:
  
       # Run Playwright Tests
       - name: Run Playwright Tests
-        run: npx playwright test ./tests/shopkart.spec.ts
+        run: npx playwright test ./tests/shopkart-full-flow.spec.ts
  
       # Print logs if failed
       - name: Print App Logs
