@@ -5,7 +5,8 @@ export class LoginPage {
   constructor(private page: Page, private logger: Logger) {}
 
   async openLoginPage() {
-    const url = 'http://localhost:5173/login';
+    const baseUrl = process.env.BASE_URL || 'http://localhost:5173';
+    const url = new URL('/login', baseUrl).toString();
     this.logger.info('Navigating to login page', { url });
     await this.page.goto(url);
   }
